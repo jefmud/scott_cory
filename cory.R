@@ -39,7 +39,7 @@ waterPotential <- function(x) {
 temperature <- function(x) {
   # computer temerature in degrees C
   # from ECH2O System Specifications and Conversion Equations
-  # x is a 32 bit number, bits 1-16 contain Rt (Raw temerature reading)
+  # x is a 32 bit number, bits 17-26 contain Rt (Raw temerature reading)
   Rt <- bitValue(x,17,26)
   if (Rt <= 900) {
     return((Rt-400)/10.0)
